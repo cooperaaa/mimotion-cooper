@@ -191,10 +191,13 @@ def main(_user, _password, _step_min, _step_max):
 
 
 if __name__ == '__main__':
-    user = sys.argv[1]
+    user1 = sys.argv[1]
+    user_list = user1.split('#')
     password = sys.argv[2]
     pushplus_token = sys.argv[3]
-    ##刷步数
-    res = main(user, password, 24000, 28000)
-    # 推送消息
-    pushMessage(pushplus_token, "刷步接口调用", res)
+    for user in user_list:
+        ##刷步数
+        res = main(user, password, 24000, 28000)
+        # 推送消息
+        pushMessage(pushplus_token, "刷步接口调用", res)
+
