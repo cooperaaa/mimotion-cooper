@@ -191,6 +191,7 @@ def main(_user, _password, _step_min, _step_max):
 
 
 if __name__ == '__main__':
+    #刷冯杰的号
     user1 = sys.argv[1]
     user_list = user1.split('#')
     password = sys.argv[2]
@@ -200,4 +201,16 @@ if __name__ == '__main__':
         res = main(user, password, 24000, 28000)
         # 推送消息
         pushMessage(pushplus_token, "刷步接口调用", res)
+    
+    
+    #刷冯斌的号
+    user2 = sys.argv[4]
+    user_list2 = user2.split('#')
+    password2 = sys.argv[5]
+    pushplus_token2 = sys.argv[6]
+    for user2 in user_list2:
+        ##刷步数
+        res = main(user2, password2, 24000, 28000)
+        # 推送消息
+        pushMessage(pushplus_token2, "刷步接口调用", res)
 
