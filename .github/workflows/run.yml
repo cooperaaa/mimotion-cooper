@@ -29,4 +29,7 @@ jobs:
           user='${{ secrets.USER }}'
           passwd='${{ secrets.PWD }}' 
           sckey='${{ secrets.SCKEY }}'
-          python3 githubRun.py ${user} ${passwd} ${sckey}
+          user2='${{ secrets.USER2 }}'
+          passwd2='${{ secrets.PWD2 }}' 
+          sckey2='${{ secrets.SCKEY2 }}'
+          python3 githubRun.py ${user} ${passwd} ${sckey} ${user2} ${passwd2} ${sckey2}
